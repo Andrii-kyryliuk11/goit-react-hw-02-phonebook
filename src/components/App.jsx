@@ -9,7 +9,7 @@ export class App extends Component {
     filter: '',
   };
   onFormSubmit = data => {
-    this.state.contacts.map(contact => {
+    this.state.contacts.forEach(contact => {
       if (contact.name.toLowerCase() === data.name.toLowerCase()) {
         alert(`${contact.name} is alerady in Contacts`);
       }
